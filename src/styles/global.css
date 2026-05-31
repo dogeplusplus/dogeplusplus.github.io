@@ -81,7 +81,24 @@ h1, h2, h3, p { margin-top: 0; }
   letter-spacing: -0.06em;
 }
 em { color: var(--accent); font-weight: inherit; }
+.hero-intro { display: flex; max-width: 800px; align-items: center; gap: 18px; }
 .hero-copy { max-width: 690px; margin: 0; color: var(--muted); font-size: 18px; }
+.profile-image-frame {
+  display: grid;
+  width: 88px;
+  height: 88px;
+  flex: 0 0 auto;
+  place-items: center;
+  padding: 5px;
+  background: var(--forest);
+  border-radius: 50%;
+}
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .hero-links { padding-top: 24px; }
 .ruled-section { border-top: 1px solid var(--line); }
 h2 { margin-bottom: 0; font: 400 clamp(40px, 4vw, 62px)/0.98 var(--serif); letter-spacing: -0.045em; }
@@ -173,7 +190,9 @@ h2 { margin-bottom: 0; font: 400 clamp(40px, 4vw, 62px)/0.98 var(--serif); lette
   nav { gap: 15px; font-size: 10px; }
   .hero { min-height: auto; padding: 46px 0 30px; }
   .hero h1, .page-intro h1 { margin-bottom: 24px; font-size: clamp(57px, 17vw, 86px); }
+  .hero-intro { align-items: flex-start; flex-direction: column; gap: 14px; }
   .hero-copy { font-size: 16px; }
+  .profile-image-frame { width: 72px; height: 72px; }
   .hero-links { flex-wrap: wrap; gap: 16px; padding-top: 20px; }
   .section-heading, .writing-callout, .contact { display: block; }
   .section-kicker { margin-bottom: 24px; }
