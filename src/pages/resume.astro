@@ -103,13 +103,9 @@ const publications = [
         <div class="experience-block">
           {roles.map((role) => (
             <article class="experience-entry">
-              <div class="entry-header">
-                <time class="entry-dates">{role.duration}</time>
-                <div class="entry-title-group">
-                  <span class="entry-company">{role.company}</span>
-                  <span class="entry-role">{role.role}</span>
-                </div>
-              </div>
+              <time class="entry-dates">{role.duration}</time>
+              <h2 class="entry-company">{role.company}</h2>
+              <p class="entry-role">{role.role}</p>
               <ul class="bullet-list">
                 {role.bullets.map((bullet) => <li class="bullet-item">{bullet}</li>)}
               </ul>
