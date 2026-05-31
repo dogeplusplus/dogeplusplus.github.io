@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Manrope:wght@400;500;600;700&display=swap");
 
 :root {
   --ink: #1d211c;
@@ -8,7 +8,7 @@
   --line: rgba(29, 33, 28, 0.18);
   --accent: #d95d39;
   --forest: #334b3a;
-  --serif: "Instrument Serif", Georgia, serif;
+  --serif: "Lora", Georgia, serif;
   --sans: "Manrope", Arial, sans-serif;
   --mono: "DM Mono", Consolas, monospace;
 }
