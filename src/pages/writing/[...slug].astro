@@ -1,0 +1,40 @@
+---
+import { getCollection, render } from "astro:content";
+import SiteFooter from "../../components/SiteFooter.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<SiteLayout title={`${post.data.title} | Albert Chung`} description={post.data.description}>
+  <div class="page-shell">
+    <SiteHeader active="writing" />
+    <main class="article-page">
+      <header class="article-header">
+        <a class="back-link" href="/writing/">← All notes</a>
+        <p class="eyebrow">
+          {post.data.publishedAt.toLocaleDateString("en-GB", { day: "2-digit", month: "long", year: "numeric" })}
+        </p>
+        <h1>{post.data.title}</h1>
+        <p class="article-lede">{post.data.description}</p>
+        <ul class="tag-list">
+          {post.data.tags.map((tag: string) => <li>{tag}</li>)}
+        </ul>
+      </header>
+      <article class="article-body">
+        <Content />
+      </article>
+    </main>
+    <SiteFooter />
+  </div>
+</SiteLayout>

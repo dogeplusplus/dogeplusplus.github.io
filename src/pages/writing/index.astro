@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import SiteFooter from "../../components/SiteFooter.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf(),
+);
+---
+
+<SiteLayout title="Writing | Albert Chung" description="Technical writing by Albert Chung on machine learning, engineering and scientific software.">
+  <div class="page-shell">
+    <SiteHeader active="writing" />
+    <main class="writing-page">
+      <section class="page-intro">
+        <p class="eyebrow">Technical writing</p>
+        <h1>Notes from the<br /><em>workbench.</em></h1>
+        <p>
+          Model behaviour, implementation details and occasional ideas that
+          deserve more room than a commit message.
+        </p>
+      </section>
+
+      <section class="post-list ruled-section" aria-label="Articles">
+        {posts.map((post) => (
+          <a class="post-row" href={`/writing/${post.id}/`}>
+            <div>
+              <p class="mono">{post.data.publishedAt.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })}</p>
+              <h2>{post.data.title}</h2>
+              <p>{post.data.description}</p>
+            </div>
+            <span class="post-arrow">↗</span>
+          </a>
+        ))}
+      </section>
+    </main>
+    <SiteFooter />
+  </div>
+</SiteLayout>

@@ -1,0 +1,15 @@
+---
+const { active = "home" } = Astro.props;
+---
+
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Albert Chung home">
+    <span class="brand-mark">AC</span>
+    <span>Albert Chung</span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a class:list={{ active: active === "home" }} href="/#work">Work</a>
+    <a class:list={{ active: active === "writing" }} href="/writing/">Writing</a>
+    <a href="/#contact">Contact</a>
+  </nav>
+</header>

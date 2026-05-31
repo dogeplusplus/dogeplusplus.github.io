@@ -1,0 +1,193 @@
+---
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+const projects = [
+  {
+    index: "01",
+    name: "bio-agents-mcp",
+    type: "Life science tooling",
+    description:
+      "MCP servers that make protein and small-molecule data available to AI agents, with local Ollama-based testing for a practical research workflow.",
+    tags: ["Python", "MCP", "PDB", "ChEMBL"],
+    url: "https://github.com/dogeplusplus/bio-agents-mcp",
+    featured: true,
+  },
+  {
+    index: "02",
+    name: "sam-at-home",
+    type: "Local computer vision",
+    description:
+      "A Gradio interface for running Meta AI's Segment Anything on your own hardware, with keypoint and bounding-box prompts for interactive segmentation.",
+    tags: ["PyTorch", "Gradio", "Segmentation"],
+    url: "https://github.com/dogeplusplus/sam-at-home",
+    stat: "64 GitHub stars",
+  },
+  {
+    index: "03",
+    name: "group-unet",
+    type: "ML research",
+    description:
+      "An experiment in rotation equivariance: Group Convolution U-Nets evaluated on butterfly segmentation, with tracked model comparisons and a technical write-up.",
+    tags: ["PyTorch", "Group theory", "W&B"],
+    url: "https://github.com/dogeplusplus/group-unet",
+    article: "/writing/equivariance-properties-in-machine-learning/",
+  },
+  {
+    index: "04",
+    name: "flax-u2net",
+    type: "Model implementation",
+    description:
+      "A from-scratch JAX and Flax implementation of U²-Net for salient-object detection, translating a non-trivial vision architecture into a functional ML stack.",
+    tags: ["JAX", "Flax", "Computer vision"],
+    url: "https://github.com/dogeplusplus/flax-u2net",
+  },
+  {
+    index: "05",
+    name: "ball-balancer",
+    type: "Reinforcement learning",
+    description:
+      "Distributed PPO training for Unity ML-Agents' 3D Ball environment. Uses MPI to run parallel environments and accelerate policy learning.",
+    tags: ["PyTorch", "PPO", "MPI", "Unity"],
+    url: "https://github.com/dogeplusplus/ball-balancer",
+  },
+  {
+    index: "06",
+    name: "termivision",
+    type: "Systems side project",
+    description:
+      "A Rust video player for the terminal. OpenCV frames become ANSI-coloured text, turning a deliberately odd idea into a working media pipeline.",
+    tags: ["Rust", "OpenCV", "Terminal"],
+    url: "https://github.com/dogeplusplus/termivision",
+  },
+];
+
+const capabilities = [
+  ["01", "Applied ML", "Protein language models, molecular GNNs, semantic segmentation and scientific imaging."],
+  ["02", "ML systems", "Model development through deployment: experiment tracking, infrastructure and research tooling."],
+  ["03", "Engineering", "Python, PyTorch, JAX, Rust, cloud infrastructure and data pipelines built for real use."],
+];
+---
+
+<SiteLayout>
+  <div class="page-shell">
+    <SiteHeader />
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Machine Learning Engineer · London</p>
+        <h1>
+          Building useful<br />
+          systems for <em>science.</em>
+        </h1>
+        <div class="hero-bottom">
+          <p class="hero-copy">
+            I am Albert, an engineer and mathematician working across machine
+            learning research, infrastructure and the life sciences.
+          </p>
+          <a class="circle-link" href="#work" aria-label="Explore selected work">
+            <span>Explore<br />work</span>
+            <span class="arrow">↓</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="intro ruled-section" id="about">
+        <p class="section-kicker">Profile</p>
+        <div class="intro-grid">
+          <h2>Research curiosity,<br /><em>engineering discipline.</em></h2>
+          <div class="prose">
+            <p>
+              I specialise in machine learning applications for proteins, small
+              molecules and scientific imaging. My work spans model development,
+              scalable infrastructure and tools that help researchers move with
+              more confidence.
+            </p>
+            <p>
+              Before life sciences, I built data pipelines in consultancy. That
+              practical foundation still shapes how I work: understand the
+              problem, test the assumptions, and make the result genuinely usable.
+            </p>
+            <div class="text-links">
+              <a href="https://github.com/dogeplusplus">GitHub ↗</a>
+              <a href="https://www.linkedin.com/in/albert-chung-a9b549104">LinkedIn ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="capabilities ruled-section" aria-labelledby="capabilities-title">
+        <div class="section-heading">
+          <p class="section-kicker">Capabilities</p>
+          <h2 id="capabilities-title">What I bring to the table.</h2>
+        </div>
+        <div class="capability-list">
+          {capabilities.map(([number, title, description]) => (
+            <article class="capability">
+              <p class="mono">{number}</p>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="work ruled-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading work-heading">
+          <div>
+            <p class="section-kicker">Selected work</p>
+            <h2 id="work-title">Projects with <em>something to say.</em></h2>
+          </div>
+          <p>A deliberately small selection from experiments, tools and systems.</p>
+        </div>
+
+        <div class="project-grid">
+          {projects.map((project) => (
+            <article class:list={["project-card", { featured: project.featured }]}>
+              <div class="project-top">
+                <p class="mono">{project.index} / {project.type}</p>
+                {project.stat && <span class="project-stat">{project.stat}</span>}
+              </div>
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+              <ul class="tag-list" aria-label={`${project.name} technologies`}>
+                {project.tags.map((tag) => <li>{tag}</li>)}
+              </ul>
+              <div class="card-links">
+                <a href={project.url}>View repository <span>↗</span></a>
+                {project.article && <a href={project.article}>Read article <span>→</span></a>}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="writing-callout ruled-section" aria-labelledby="writing-title">
+        <p class="section-kicker">Technical writing</p>
+        <div>
+          <h2 id="writing-title">Notes from the workbench.</h2>
+          <p>
+            Longer-form explorations of model behaviour, implementation details
+            and whatever else seems worth understanding properly.
+          </p>
+          <a class="button-link" href="/writing/">Read the notes <span>→</span></a>
+        </div>
+      </section>
+
+      <section class="contact ruled-section" id="contact">
+        <p class="section-kicker">Contact</p>
+        <div>
+          <h2>Let’s build something<br /><em>that matters.</em></h2>
+          <p>
+            I am always glad to talk about applied machine learning, scientific
+            software and unusually interesting technical problems.
+          </p>
+          <a class="email-link" href="mailto:albertswchung@gmail.com">albertswchung@gmail.com <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <SiteFooter />
+  </div>
+</SiteLayout>
