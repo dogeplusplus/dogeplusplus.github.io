@@ -184,9 +184,6 @@ h2 { margin-bottom: 0; font: 400 clamp(40px, 4vw, 62px)/0.98 var(--serif); lette
 .article-body th, .article-body td { padding: 10px 8px; border-bottom: 1px solid var(--line); text-align: left; }
 
 /* Resume page */
-.resume-hero { padding: 54px 0 32px; }
-.resume-hero h1 { max-width: 920px; }
-.resume-hero .hero-copy { max-width: 720px; }
 
 /* — Experience — */
 .experience-section { padding-top: 58px; }
@@ -320,9 +317,6 @@ h2 { margin-bottom: 0; font: 400 clamp(40px, 4vw, 62px)/0.98 var(--serif); lette
   .article-body h2 { font-size: 34px; }
 
   /* Resume responsive */
-  .resume-hero { padding: 46px 0 40px; }
-  .resume-hero h1 { font-size: clamp(50px, 9vw, 62px); }
-  .resume-hero .hero-copy { font-size: 16px; }
   .experience-section { padding-top: 36px; }
   .experience-entry { padding: 28px 0; }
   .experience-entry:first-of-type { padding-top: 20px; }
