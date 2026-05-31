@@ -84,24 +84,11 @@ em { color: var(--accent); font-weight: inherit; }
 .hero-copy { max-width: 690px; margin: 0; color: var(--muted); font-size: 18px; }
 .hero-links { padding-top: 24px; }
 .ruled-section { border-top: 1px solid var(--line); }
-.intro { display: grid; grid-template-columns: 150px 1fr; padding: 26px 0 54px; }
-.intro-grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: 56px; }
 h2 { margin-bottom: 0; font: 400 clamp(40px, 4vw, 62px)/0.98 var(--serif); letter-spacing: -0.045em; }
-.prose { max-width: 610px; padding-top: 8px; color: var(--muted); font-size: 16px; }
-.prose p { margin-bottom: 22px; }
 .text-links { display: flex; gap: 24px; padding-top: 14px; color: var(--ink); font: 500 12px/1 var(--mono); letter-spacing: 0.05em; text-transform: uppercase; }
 .text-links a:hover, .card-links a:hover, .back-link:hover { color: var(--accent); }
 .section-heading { display: grid; grid-template-columns: 150px 1fr; padding: 26px 0 26px; }
-.capability-list { border-top: 1px solid var(--line); }
-.capability {
-  display: grid;
-  grid-template-columns: 150px 0.7fr 1fr;
-  gap: 24px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
-}
-.capability h3, .project-card h3 { margin: 0; font: 400 31px/1 var(--serif); letter-spacing: -0.035em; }
-.capability p:last-child { max-width: 580px; margin: 0; color: var(--muted); font-size: 14px; }
+.project-card h3 { margin: 0; font: 400 31px/1 var(--serif); letter-spacing: -0.035em; }
 .work { padding-bottom: 58px; }
 .work-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; }
 .work-heading h2 { margin-top: 10px; }
@@ -190,13 +177,8 @@ h2 { margin-bottom: 0; font: 400 clamp(40px, 4vw, 62px)/0.98 var(--serif); lette
   .hero h1, .page-intro h1 { margin-bottom: 24px; font-size: clamp(57px, 17vw, 86px); }
   .hero-copy { font-size: 16px; }
   .hero-links { flex-wrap: wrap; gap: 16px; padding-top: 20px; }
-  .intro, .section-heading, .writing-callout, .contact { display: block; }
+  .section-heading, .writing-callout, .contact { display: block; }
   .section-kicker { margin-bottom: 24px; }
-  .intro { padding: 22px 0 44px; }
-  .intro-grid { display: block; }
-  .prose { padding-top: 22px; }
-  .capability { display: block; padding: 18px 0; }
-  .capability h3 { margin: 8px 0; font-size: 28px; }
   .work { padding-bottom: 46px; }
   .work-heading { display: block; padding-bottom: 34px; }
   .work-heading > p { margin-top: 20px; }

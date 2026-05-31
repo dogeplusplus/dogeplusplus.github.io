@@ -63,11 +63,6 @@ const projects = [
   },
 ];
 
-const capabilities = [
-  ["01", "Model research", "Experiment design, architecture adaptation and behavioural evaluation across language, molecular and vision models."],
-  ["02", "ML systems", "Efficient inference, research infrastructure, experiment tracking and tooling that turns ideas into reproducible results."],
-  ["03", "Research engineering", "Python, PyTorch and JAX, with the engineering judgement to move between model internals and production systems."],
-];
 ---
 
 <SiteLayout>
@@ -76,15 +71,16 @@ const capabilities = [
 
     <main>
       <section class="hero">
-        <p class="eyebrow">ML Research Engineer · London</p>
+        <p class="eyebrow">Machine Learning Engineer · London</p>
         <h1>
-          ML research,<br />
-          built to <em>work.</em>
+          ML systems,<br />
+          built to <em>last.</em>
         </h1>
         <p class="hero-copy">
-          I am Albert, a machine learning research engineer with deep
-          life-sciences experience and an interest in hard technical problems
-          across the wider technology sector.
+          I am Albert, a machine learning engineer specialising in MLOps,
+          production infrastructure and applied ML. Most of my experience is in
+          life sciences, and I am interested in hard technical problems across
+          the wider technology sector.
         </p>
         <div class="hero-links text-links">
           <a href="#work">Selected work ↓</a>
@@ -99,7 +95,7 @@ const capabilities = [
             <p class="section-kicker">Selected work</p>
             <h2 id="work-title">Selected <em>work.</em></h2>
           </div>
-          <p>Experiments and systems chosen for technical substance, not popularity.</p>
+          <p>Practical tools and experiments that reflect how I like to build.</p>
         </div>
 
         <div class="project-grid">
@@ -123,41 +119,6 @@ const capabilities = [
         </div>
       </section>
 
-      <section class="intro ruled-section" id="about">
-        <p class="section-kicker">Profile</p>
-        <div class="intro-grid">
-          <h2>Research engineer<br /><em>with range.</em></h2>
-          <div class="prose">
-            <p>
-              I turn machine learning ideas into tested, usable systems. My
-              strongest domain experience is in life sciences: proteins, small
-              molecules and scientific imaging.
-            </p>
-            <p>
-              The engineering transfers well beyond that domain. I am equally
-              interested in efficient inference, model internals and research
-              tooling for ambitious technology teams.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="capabilities ruled-section" aria-labelledby="capabilities-title">
-        <div class="section-heading">
-          <p class="section-kicker">Capabilities</p>
-          <h2 id="capabilities-title">What I work on.</h2>
-        </div>
-        <div class="capability-list">
-          {capabilities.map(([number, title, description]) => (
-            <article class="capability">
-              <p class="mono">{number}</p>
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section class="writing-callout ruled-section" aria-labelledby="writing-title">
         <p class="section-kicker">Technical writing</p>
         <div>
@@ -173,7 +134,7 @@ const capabilities = [
       <section class="contact ruled-section" id="contact">
         <p class="section-kicker">Contact</p>
         <div class="contact-details">
-          <p>For ML research engineering roles and interesting technical problems:</p>
+          <p>For ML engineering roles and interesting technical problems:</p>
           <a class="email-link" href="mailto:albertswchung@gmail.com">albertswchung@gmail.com <span>↗</span></a>
         </div>
       </section>
