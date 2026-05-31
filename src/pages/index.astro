@@ -6,26 +6,35 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 const projects = [
   {
     index: "01",
+    name: "duo-laguna-adapter",
+    type: "LLM inference research",
+    description:
+      "Poolside Laguna Research Hackathon submission with Cameron Wheeler. Adapted DuoAttention to Laguna's gated attention architecture and used learned head importance for a mixed-precision KV-cache policy, reducing cache size by up to 53%.",
+    tags: ["PyTorch", "LLM inference", "KV cache", "Quantization"],
+    url: "https://huggingface.co/poolside-laguna-hackathon/duo-laguna-adapter",
+    repo: "https://github.com/dogeplusplus/duo-attention",
+    featured: true,
+  },
+  {
+    index: "02",
     name: "bio-agents-mcp",
     type: "Life science tooling",
     description:
       "MCP servers that make protein and small-molecule data available to AI agents, with local Ollama-based testing for a practical research workflow.",
     tags: ["Python", "MCP", "PDB", "ChEMBL"],
     url: "https://github.com/dogeplusplus/bio-agents-mcp",
-    featured: true,
-  },
-  {
-    index: "02",
-    name: "sam-at-home",
-    type: "Local computer vision",
-    description:
-      "A Gradio interface for running Meta AI's Segment Anything on your own hardware, with keypoint and bounding-box prompts for interactive segmentation.",
-    tags: ["PyTorch", "Gradio", "Segmentation"],
-    url: "https://github.com/dogeplusplus/sam-at-home",
-    stat: "64 GitHub stars",
   },
   {
     index: "03",
+    name: "jax-sentiment-analysis",
+    type: "Transformer fundamentals",
+    description:
+      "A from-scratch Transformer implementation in JAX, Flax and Optax, applied to sentiment analysis to explore attention, training loops and model internals directly.",
+    tags: ["JAX", "Flax", "Optax", "Transformers"],
+    url: "https://github.com/dogeplusplus/jax-sentiment-analysis",
+  },
+  {
+    index: "04",
     name: "group-unet",
     type: "ML research",
     description:
@@ -35,7 +44,7 @@ const projects = [
     article: "/writing/equivariance-properties-in-machine-learning/",
   },
   {
-    index: "04",
+    index: "05",
     name: "flax-u2net",
     type: "Model implementation",
     description:
@@ -44,7 +53,7 @@ const projects = [
     url: "https://github.com/dogeplusplus/flax-u2net",
   },
   {
-    index: "05",
+    index: "06",
     name: "ball-balancer",
     type: "Reinforcement learning",
     description:
@@ -52,21 +61,12 @@ const projects = [
     tags: ["PyTorch", "PPO", "MPI", "Unity"],
     url: "https://github.com/dogeplusplus/ball-balancer",
   },
-  {
-    index: "06",
-    name: "termivision",
-    type: "Systems side project",
-    description:
-      "A Rust video player for the terminal. OpenCV frames become ANSI-coloured text, turning a deliberately odd idea into a working media pipeline.",
-    tags: ["Rust", "OpenCV", "Terminal"],
-    url: "https://github.com/dogeplusplus/termivision",
-  },
 ];
 
 const capabilities = [
-  ["01", "Applied ML", "Protein language models, molecular GNNs, semantic segmentation and scientific imaging."],
-  ["02", "ML systems", "Model development through deployment: experiment tracking, infrastructure and research tooling."],
-  ["03", "Engineering", "Python, PyTorch, JAX, Rust, cloud infrastructure and data pipelines built for real use."],
+  ["01", "Model research", "Experiment design, architecture adaptation and behavioural evaluation across language, molecular and vision models."],
+  ["02", "ML systems", "Efficient inference, research infrastructure, experiment tracking and tooling that turns ideas into reproducible results."],
+  ["03", "Research engineering", "Python, PyTorch and JAX, with the engineering judgement to move between model internals and production systems."],
 ];
 ---
 
@@ -76,15 +76,15 @@ const capabilities = [
 
     <main>
       <section class="hero">
-        <p class="eyebrow">Machine Learning Engineer · London</p>
+        <p class="eyebrow">ML Research Engineer · London</p>
         <h1>
-          Building useful<br />
-          systems for <em>science.</em>
+          Research ideas,<br />
+          engineered <em>properly.</em>
         </h1>
         <div class="hero-bottom">
           <p class="hero-copy">
-            I am Albert, an engineer and mathematician working across machine
-            learning research, infrastructure and the life sciences.
+            I am Albert, a machine learning research engineer working across
+            model development, efficient inference and the life sciences.
           </p>
           <a class="circle-link" href="#work" aria-label="Explore selected work">
             <span>Explore<br />work</span>
@@ -99,15 +99,15 @@ const capabilities = [
           <h2>Research curiosity,<br /><em>engineering discipline.</em></h2>
           <div class="prose">
             <p>
-              I specialise in machine learning applications for proteins, small
-              molecules and scientific imaging. My work spans model development,
-              scalable infrastructure and tools that help researchers move with
-              more confidence.
+              I specialise in turning machine learning ideas into well-tested
+              systems. My work spans model architecture, inference efficiency,
+              scalable infrastructure and scientific applications involving
+              proteins, small molecules and imaging.
             </p>
             <p>
-              Before life sciences, I built data pipelines in consultancy. That
-              practical foundation still shapes how I work: understand the
-              problem, test the assumptions, and make the result genuinely usable.
+              My background in mathematics and data engineering shapes how I
+              approach research: understand the mechanism, test the assumptions
+              explicitly, and leave behind an implementation others can use.
             </p>
             <div class="text-links">
               <a href="https://github.com/dogeplusplus">GitHub ↗</a>
@@ -120,7 +120,7 @@ const capabilities = [
       <section class="capabilities ruled-section" aria-labelledby="capabilities-title">
         <div class="section-heading">
           <p class="section-kicker">Capabilities</p>
-          <h2 id="capabilities-title">What I bring to the table.</h2>
+          <h2 id="capabilities-title">Research depth,<br />engineering follow-through.</h2>
         </div>
         <div class="capability-list">
           {capabilities.map(([number, title, description]) => (
@@ -137,9 +137,9 @@ const capabilities = [
         <div class="section-heading work-heading">
           <div>
             <p class="section-kicker">Selected work</p>
-            <h2 id="work-title">Projects with <em>something to say.</em></h2>
+            <h2 id="work-title">Selected <em>research engineering.</em></h2>
           </div>
-          <p>A deliberately small selection from experiments, tools and systems.</p>
+          <p>Experiments and systems chosen for technical substance, not popularity.</p>
         </div>
 
         <div class="project-grid">
@@ -147,7 +147,6 @@ const capabilities = [
             <article class:list={["project-card", { featured: project.featured }]}>
               <div class="project-top">
                 <p class="mono">{project.index} / {project.type}</p>
-                {project.stat && <span class="project-stat">{project.stat}</span>}
               </div>
               <h3>{project.name}</h3>
               <p>{project.description}</p>
@@ -155,7 +154,8 @@ const capabilities = [
                 {project.tags.map((tag) => <li>{tag}</li>)}
               </ul>
               <div class="card-links">
-                <a href={project.url}>View repository <span>↗</span></a>
+                <a href={project.url}>{project.repo ? "View submission" : "View repository"} <span>↗</span></a>
+                {project.repo && <a href={project.repo}>View fork <span>↗</span></a>}
                 {project.article && <a href={project.article}>Read article <span>→</span></a>}
               </div>
             </article>
@@ -177,12 +177,8 @@ const capabilities = [
 
       <section class="contact ruled-section" id="contact">
         <p class="section-kicker">Contact</p>
-        <div>
-          <h2>Let’s build something<br /><em>that matters.</em></h2>
-          <p>
-            I am always glad to talk about applied machine learning, scientific
-            software and unusually interesting technical problems.
-          </p>
+        <div class="contact-details">
+          <p>For ML research engineering roles and interesting technical problems:</p>
           <a class="email-link" href="mailto:albertswchung@gmail.com">albertswchung@gmail.com <span>↗</span></a>
         </div>
       </section>
