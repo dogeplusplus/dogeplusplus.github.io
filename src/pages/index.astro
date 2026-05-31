@@ -78,58 +78,18 @@ const capabilities = [
       <section class="hero">
         <p class="eyebrow">ML Research Engineer · London</p>
         <h1>
-          Research ideas,<br />
-          engineered <em>properly.</em>
+          ML research,<br />
+          built to <em>work.</em>
         </h1>
-        <div class="hero-bottom">
-          <p class="hero-copy">
-            I am Albert, a machine learning research engineer working across
-            model development, efficient inference and the life sciences.
-          </p>
-          <a class="circle-link" href="#work" aria-label="Explore selected work">
-            <span>Explore<br />work</span>
-            <span class="arrow">↓</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="intro ruled-section" id="about">
-        <p class="section-kicker">Profile</p>
-        <div class="intro-grid">
-          <h2>Research curiosity,<br /><em>engineering discipline.</em></h2>
-          <div class="prose">
-            <p>
-              I specialise in turning machine learning ideas into well-tested
-              systems. My work spans model architecture, inference efficiency,
-              scalable infrastructure and scientific applications involving
-              proteins, small molecules and imaging.
-            </p>
-            <p>
-              My background in mathematics and data engineering shapes how I
-              approach research: understand the mechanism, test the assumptions
-              explicitly, and leave behind an implementation others can use.
-            </p>
-            <div class="text-links">
-              <a href="https://github.com/dogeplusplus">GitHub ↗</a>
-              <a href="https://www.linkedin.com/in/albert-chung-a9b549104">LinkedIn ↗</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="capabilities ruled-section" aria-labelledby="capabilities-title">
-        <div class="section-heading">
-          <p class="section-kicker">Capabilities</p>
-          <h2 id="capabilities-title">Research depth,<br />engineering follow-through.</h2>
-        </div>
-        <div class="capability-list">
-          {capabilities.map(([number, title, description]) => (
-            <article class="capability">
-              <p class="mono">{number}</p>
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </article>
-          ))}
+        <p class="hero-copy">
+          I am Albert, a machine learning research engineer with deep
+          life-sciences experience and an interest in hard technical problems
+          across the wider technology sector.
+        </p>
+        <div class="hero-links text-links">
+          <a href="#work">Selected work ↓</a>
+          <a href="https://github.com/dogeplusplus">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/albert-chung-a9b549104">LinkedIn ↗</a>
         </div>
       </section>
 
@@ -137,7 +97,7 @@ const capabilities = [
         <div class="section-heading work-heading">
           <div>
             <p class="section-kicker">Selected work</p>
-            <h2 id="work-title">Selected <em>research engineering.</em></h2>
+            <h2 id="work-title">Selected <em>work.</em></h2>
           </div>
           <p>Experiments and systems chosen for technical substance, not popularity.</p>
         </div>
@@ -158,6 +118,41 @@ const capabilities = [
                 {project.repo && <a href={project.repo}>View fork <span>↗</span></a>}
                 {project.article && <a href={project.article}>Read article <span>→</span></a>}
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="intro ruled-section" id="about">
+        <p class="section-kicker">Profile</p>
+        <div class="intro-grid">
+          <h2>Research engineer<br /><em>with range.</em></h2>
+          <div class="prose">
+            <p>
+              I turn machine learning ideas into tested, usable systems. My
+              strongest domain experience is in life sciences: proteins, small
+              molecules and scientific imaging.
+            </p>
+            <p>
+              The engineering transfers well beyond that domain. I am equally
+              interested in efficient inference, model internals and research
+              tooling for ambitious technology teams.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="capabilities ruled-section" aria-labelledby="capabilities-title">
+        <div class="section-heading">
+          <p class="section-kicker">Capabilities</p>
+          <h2 id="capabilities-title">What I work on.</h2>
+        </div>
+        <div class="capability-list">
+          {capabilities.map(([number, title, description]) => (
+            <article class="capability">
+              <p class="mono">{number}</p>
+              <h3>{title}</h3>
+              <p>{description}</p>
             </article>
           ))}
         </div>
