@@ -90,9 +90,7 @@ h2 { margin-bottom: 0; font: 400 clamp(40px, 4vw, 62px)/0.98 var(--serif); lette
 .section-heading { display: grid; grid-template-columns: 150px 1fr; padding: 26px 0 26px; }
 .project-card h3 { margin: 0; font: 400 31px/1 var(--serif); letter-spacing: -0.035em; }
 .work { padding-bottom: 58px; }
-.work-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; }
 .work-heading h2 { margin-top: 10px; }
-.work-heading > p { max-width: 290px; margin-bottom: 6px; color: var(--muted); font-size: 14px; }
 .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
 .project-card {
   display: flex;
