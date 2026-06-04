@@ -9,9 +9,10 @@ const roles = [
     role: "Machine Learning Engineer",
     duration: "Oct 2024 – Present",
     bullets: [
-      "Architected internal MLOps platform supporting 2,000+ model training experiments with hyperparameter tracking",
-      "Designed Agentic LLM system with tool use to answer marketing data analysis questions and extract KPIs",
-      "Deployed 50+ models for prescriptions forecasting, owning ETL optimization, drift monitoring and retraining",
+      "Architected an internal MLOps platform supporting 2,000+ model training experiments with hyperparameter tracking",
+      "Deployed 50+ prescription forecasting models, owning ETL optimization, drift monitoring and retraining",
+      "Built an agentic LLM system with tool use for marketing analytics, KPI extraction and data-question answering",
+      "Cut production issue detection time by one week through scheduled builds and monitoring alerts",
     ],
   },
   {
@@ -19,9 +20,9 @@ const roles = [
     role: "Machine Learning Research Engineer",
     duration: "Nov 2023 – Sep 2024",
     bullets: [
-      "Fine-tuned protein language models to run semantic search on antibody libraries for antigen targets",
-      "Screened drug hits across 20M ligands with pLMs and GNNs distributed over 40 GPUs on Docker/Kubernetes",
-      "Improved a biological LLM-chatbot by 10% with Retrieval-Augmented Generation",
+      "Screened 20M ligands for drug hits with protein language models and GNNs distributed across 40 GPUs on Docker/Kubernetes",
+      "Fine-tuned protein transformers for semantic search over antibody libraries against antigen targets",
+      "Improved biological LLM-chatbot accuracy by 10% with Retrieval-Augmented Generation",
     ],
   },
   {
@@ -29,9 +30,10 @@ const roles = [
     role: "Senior Data Scientist",
     duration: "Oct 2021 – Oct 2023",
     bullets: [
-      "Scaled MLOps capabilities to over 100 models using AWS Batch/ECS and MLflow",
-      "Trained large 3D vision models on 1 GPU via DeepSpeed with acceleration and gradient checkpointing",
-      "Fine-tuned diffusion models using LoRA on synthetic MRI images of rare anatomy for data augmentation",
+      "Scaled organizational MLOps to 100+ models using AWS Batch/ECS and MLflow",
+      "Automated ML inference infrastructure for +£5m pharma contracts with AWS Step Functions and Terraform",
+      "Reduced inference time by 50% by running PyTorch model ensembles concurrently with multiprocessing",
+      "Trained large 3D vision models on a single GPU with DeepSpeed, Accelerate and gradient checkpointing",
     ],
   },
   {
@@ -39,8 +41,9 @@ const roles = [
     role: "Deep Learning Engineer",
     duration: "Jun 2018 – Jul 2021",
     bullets: [
-      "Used self-supervised image-denoising PyTorch models to decrease laser power for microscopy by 20%",
-      "Applied transfer learning to reduce retraining data needs by 80% across new imaging tasks",
+      "Reduced new-task retraining data by 80% by applying transfer learning to microscopy models",
+      "Decreased microscopy laser power requirements by 20% with self-supervised PyTorch image-denoising models",
+      "Built Python/OpenCV video labelling tools supporting a patent for a biomarker detection assay",
     ],
   },
   {
@@ -48,9 +51,29 @@ const roles = [
     role: "Consultant Data Analyst",
     duration: "Oct 2015 – May 2018",
     bullets: [
-      "Built ETL pipelines in SQL for 60,000 customers and over £1bn in retail bank assets",
-      "Identified churn-risk customers with tree models using Scikit-Learn",
+      "Built SQL ETL pipelines for 60,000 customers and over £1bn in retail bank assets",
+      "Delivered anti-money-laundering analytics in PowerBI, reducing exposure to millions in potential fines",
+      "Cut mailing costs by 10% through SQL entity matching, duplicate detection and data cleaning",
     ],
+  },
+];
+
+const impactHighlights = [
+  {
+    value: "2,000+",
+    label: "Tracked model training experiments",
+  },
+  {
+    value: "50+",
+    label: "Forecasting models deployed",
+  },
+  {
+    value: "20M",
+    label: "Ligands screened for drug hits",
+  },
+  {
+    value: "+£5m",
+    label: "Pharma-contract infrastructure automated",
   },
 ];
 
@@ -93,6 +116,23 @@ const publications = [
     <SiteHeader active="resume" />
 
     <main>
+      <section class="impact-section ruled-section" aria-labelledby="impact-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker" id="impact-title">Selected impact</p>
+          </div>
+        </div>
+
+        <div class="impact-grid">
+          {impactHighlights.map((highlight) => (
+            <article class="impact-item">
+              <strong>{highlight.value}</strong>
+              <span>{highlight.label}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section class="experience-section ruled-section" aria-labelledby="experience-title">
         <div class="section-heading">
           <div>

@@ -185,8 +185,38 @@ h2 { margin-bottom: 0; font: 400 clamp(28px, 2.5vw, 42px)/0.98 var(--serif); let
 
 /* Resume page */
 
+/* — Selected impact — */
+.impact-section { padding-top: 58px; }
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin-bottom: 36px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.impact-item {
+  min-height: 132px;
+  padding: 22px;
+  background: var(--paper);
+}
+.impact-item strong {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--forest);
+  font: 400 clamp(34px, 4vw, 52px)/0.9 var(--serif);
+  letter-spacing: -0.035em;
+}
+.impact-item span {
+  display: block;
+  max-width: 190px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 /* — Experience — */
-.experience-section { padding-top: 58px; }
+.experience-section { padding-top: 28px; }
 .experience-block { padding: 0 0 24px; }
 
 /* Each role card */
@@ -322,7 +352,11 @@ h2 { margin-bottom: 0; font: 400 clamp(28px, 2.5vw, 42px)/0.98 var(--serif); let
   .article-body h2 { font-size: 28px; }
 
   /* Resume responsive */
-  .experience-section { padding-top: 36px; }
+  .impact-section { padding-top: 36px; }
+  .impact-grid { grid-template-columns: repeat(2, 1fr); margin-bottom: 28px; }
+  .impact-item { min-height: 118px; padding: 18px; }
+  .impact-item strong { font-size: 34px; }
+  .experience-section { padding-top: 24px; }
   .experience-entry { padding: 28px 0; }
   .experience-entry:first-of-type { padding-top: 20px; }
   .entry-company { font-size: 22px; }
@@ -336,5 +370,5 @@ h2 { margin-bottom: 0; font: 400 clamp(28px, 2.5vw, 42px)/0.98 var(--serif); let
   .education-entry h3 { font-size: 15px; }
   .publications-section { padding-top: 36px; }
   .publication-item { flex-direction: column; gap: 6px; padding: 18px 0; }
+  .pub-workshop { margin-left: 0; white-space: normal; }
 }
-
