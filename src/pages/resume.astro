@@ -58,25 +58,6 @@ const roles = [
   },
 ];
 
-const impactHighlights = [
-  {
-    value: "2,000+",
-    label: "Tracked model training experiments",
-  },
-  {
-    value: "50+",
-    label: "Forecasting models deployed",
-  },
-  {
-    value: "20M",
-    label: "Ligands screened for drug hits",
-  },
-  {
-    value: "+£5m",
-    label: "Pharma-contract infrastructure automated",
-  },
-];
-
 const education = [
   {
     institution: "University of Warwick",
@@ -116,23 +97,6 @@ const publications = [
     <SiteHeader active="resume" />
 
     <main>
-      <section class="impact-section ruled-section" aria-labelledby="impact-title">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker" id="impact-title">Selected impact</p>
-          </div>
-        </div>
-
-        <div class="impact-grid">
-          {impactHighlights.map((highlight) => (
-            <article class="impact-item">
-              <strong>{highlight.value}</strong>
-              <span>{highlight.label}</span>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section class="experience-section ruled-section" aria-labelledby="experience-title">
         <div class="section-heading">
           <div>
